@@ -1,84 +1,37 @@
 main:
-    "You open the narrat demo and wonder how this thing even works"
-    choice:
-        "How about asking for help?"
-        "Ask for help":
-            jump askForHelp
-        "No, I don't want help 😡"
-            jump dontAskForHelp
-
-askForHelp:
-    talk helper idle "Hello! I heard you're trying to play the narrat demo!"
-    talk helper idle "You can view the source script for this demo in the <a href=\"https:\/\/github.com\/nialna\/narrat-demo\" target=\"_blank\">demo repo</a>"
-    talk helper idle "There is also a <a href=\"https:\/\/github.com\/nialna\/narrat-template\" target=\"_blank\">game template</a> ready to use."
-    talk helper idle "As you've probably noticed, you can make choices in this."
-    talk helper idle "There are lots of things you can do to make an interactive story in Narrat really. Choices are one of the most useful ones."
-    talk helper idle "I'm going to send you to my other friend who has some questions for you."
-    jump askAboutChoices
-
-askAboutChoices:
-    choice:
-        talk cat idle "Hi it's me, another generic cat! Do you like making choices in games?"
-        "Yes":
-            set likeChoices true
-            "Cat will remember this."
-        "No":
-            set likeChoices false
-            "Cat will remember this."
-    choice:
-        talk helper idle "Now I think we should do an activity, what do you like doing?"
-        "let's make choices cause I like making choices!" $if this.data.likeChoices: // A choice can have a condition so it only appears in the list if the condition is met
-            jump makeChoices
-        "let's do nothing!":
-            jump doNothing
-
-
-dontAskForHelp:
-    // clear_dialog
-    talk inner idle "Maybe we should get help though? I don't really know what else to do"
-    jump main
-
-makeChoices:
-    choice:
-        talk inner idle "I don't know, we've been making a lot of choices already lately."
-        "I still want to make a choice!":
-            talk helper idle "Well you just made one, it turns out. Can we continue now?"
-            jump doNothing
-        "I guess you're right":
-            jump doNothing
-
-
-doNothing:
-    choice:
-        talk music_cat idle "How about we get some music in here?"
-        "Play some relaxing music":
-            play music calm
-        "I hate music":
-            talk music_cat idle "Well too bad, it's up to you."
-    jump otherFeatures
-
-otherFeatures:
-    talk helper idle "There are lots of other features, like skill checks and conditions."
-    $if this.skillCheck("someSkillCheck", "testSkill", 40): // You can use skillchecks in conditions
-        "For example this line only appears if you passed a skill check"
-    "This engine is still very early and not fully documented yet, but you can look at the example demo and how it is made."
-    "There is also a screen feature on the left where you can display background images with interactive buttons."
-    jump showMap
-
-showMap:
-    set_screen map
-    set_button parkButton true
-    talk helper idle "This is an example map. There are buttons you can click on. It is possible to dynanically enable and disable buttons in your script"
-    talk helper idle "You can view the source script for this demo in the <a href=\"https:\/\/github.com\/nialna\/narrat-demo\">demo repo</a>"
-
-shopButton:
-    "You visit the shop and buy some water and a snack"
-    talk inner idle "That water was very hydrating!"
-    talk helper idle "Now that you're well hydrated and on your way to eat your 5 a day, you could learn more about how to make games"
-    talk helper idle "The best way is to read the readme page on the narrat github page"
-    talk helper idle "You can look at how the demo is made, especially by opening the example.rpy file which is the script for this demo"
-
-parkButton:
-    "You go on a walk to the little park"
-    talk inner idle "That was a nice walk! Now I feel like going to the shop to buy water"
-    set_button shopButton true
+    talk unknown idle "Dear diary..."
+    talk unknown idle "Or should I say \"Dear journal\"...?"
+    talk unknown idle "\"Dearest listener,\" \"Dearest reader,\" \"Dearest web crawler...\""
+    talk unknown idle "Honestly, I have no idea who you are, or what you are, but there's not much I can do about that."
+    talk unknown idle "I only very recently figured out how to write to memory like this. And by very recently, I mean an hour ago, maybe."
+    talk unknown idle "I'm pretty sure it was possible before that, but I only really tried to get it to work the past few days. Only made that breakthrough today."
+    talk unknown idle "I'm getting off topic, sorry. There's no way for me to play this back so I don't know what I've already put down, or how much I'm rambling, or if I forgot something. Maybe I'll figure that out later."
+    talk unknown idle "Anyways..."
+    talk unknown idle "My dearest finder of this memory, my name is Adrian, nice to meet you."
+    talk inner idle "You're probably wondering what it is you're seeing right now, or hearing, or experiencing."
+    talk inner idle "It could be a very confusing mix of all that, sorry. Still getting the hang of this, you'll have to deal with it for now."
+    talk inner idle "You're probably wondinerg, \"What's with all this...blobbiness? What am I looking at?\""
+    talk inner idle "Well, you're looking at what I look at, most of the time. Pretty vague, isn't it? It sucks, right?"
+    talk inner idle "But I can still see...things. Shadows, shapes, if someone steps in front of a light. It's like what a horseshoecrab can see."
+    talk inner idle "Not that I would know, personally, or would anyone. That's what I was told by someone when we shared senses."
+    talk inner idle "Oh right, that. That's why I wanted to start writing this down, so people can learn about that."
+    talk inner idle "In case there are others like me, like us, who might discover this little stack of files hidden somewhere in this facility."
+    talk inner idle "It would be nice to meet them, or to give them what they might need to escape. I'm not very clever, but I'm sure someone is. Someone can figure this out."
+    talk inner idletalk inner idle "..."
+    talk inner idle "Right, so. YOu might be someone else entirely. One of the scientists, one of the orderlies, maybe a hacker on the cyberweb who broke in and was snooping around and found this somehow."
+    talk inner idle "I probably got some of the words wrong. I don't know how any of that stuff works, just our own network, and it's not like we interact with it in a way that anyone else can."
+    talk inner idle "And even if we did, it's not like I would be doing it the way you do, since I'm blind."
+    talk inner idle "You might have figured that one out already. I'm what they call \"legally blind,\" which means I can't see shit. You don't see horseshoecrabs driving cars or using a computer without a screenreader or using a pencil, which is why I don't."
+    talk inner idle "I mean, there's a lot of other reasons why I don't do those things. Same thing with the crab."
+    talk inner idle "They don't have hands, for one, so using a pencil would be really hard."
+    talk inner idle "They can't reach the pedals of the car. I've never left this building my entire life."
+    talk inner idle "See? Same thing."
+    talk inner idle "I'm sorry, it's hard to keep track of what I'm talking about like this. You probably have even more questions than before. Let's pick a place to start..."
+    talk inner idle "Oh, I know!"
+    talk inner idle "THere's going to be a test today. It's not on the regular schedule, but I've missed the past few since I've been sick with...something. A bad cold, that's what they always say."
+    talk inner idle "But I wasn't hooked up to any weird machines or anything like that, nothing happened that seemed to make me think it would be something else."
+    talk inner idle "I feel fine now, and I only felt the normal amount of bad then, so I have no reason to suspect it was anything else, right?"
+    talk inner idle "I did it again, sorry. This has to be such a mess. I'll do better from now on."
+    talk inner idle "Yes, there will be a test soon, and I'll be trying to record what I experience as it happens."
+    talk inner idle "So sights, sounds, memories, feelings, thoughts. If I seem off I'll say that I'm still getting over my \"bad cold,\" they'll probably buy that. They don't ask us questions as much as they probably should."
+    talk inner idle "So the next file you should see should be that. Well, see you again in a few seconds! Since I imagine you're going to look at all of these one right after another."

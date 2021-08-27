@@ -1,10 +1,8 @@
 {
-  "gameTitle": "Lovely Lady RPG",
+  "gameTitle": "Project Zed",
   "images": {
-    "narrat": "img/backgrounds/narrat.png",
-    "map": "img/backgrounds/map.png",
-    "shopButton": "img/ui/shop-button.png",
-    "parkButton": "img/ui/park-button.png"
+    "blank": "img/backgrounds/blank.png",
+    "nowhere": "img/backgrounds/nowhere.png"
   },
   "layout": {
     "backgrounds": {
@@ -16,11 +14,14 @@
   },
   "screens": {
     "default": {
-      "background": "narrat"
+      "background": "nowhere"
+    },
+    "blank": {
+      "background": "blank"
     },
     "map": {
       "background": "map",
-      "buttons": ["shopButton", "parkButton"]
+      "buttons": ["x", "y"]
     }
   },
   "buttons": {
