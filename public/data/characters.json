@@ -13,41 +13,41 @@
       },
       "name": "You"
     },
-    "cat": {
+    "scientist_1": {
       "sprites": {
-        "idle": "cat_idle.jpg"
+        "idle": "scientist.jpg"
       },
       "style": {
         "color": "white"
       },
-      "name": "Generic Cat"
+      "name": "Scientist 1"
     },
-    "helper": {
+    "unknown": {
       "sprites": {
-        "idle": "helper_cat.png"
+        "idle": "question_mark.png"
       },
       "style": {
         "color": "green"
       },
-      "name": "Helper Cat"
+      "name": "?"
     },
-    "music_cat": {
+    "outer": {
       "sprites": {
-        "idle": "music_cat.jpeg"
+        "idle": "letter_a.jpeg"
       },
       "style": {
-        "color": "green"
+        "color": "orange"
       },
-      "name": "Music Cat"
+      "name": "Adrian"
     },
     "inner": {
       "sprites": {
-        "idle": "inner_voice.png"
+        "idle": "letter_a.png"
       },
       "style": {
         "color": "red"
       },
-      "name": "Inner Voice"
+      "name": "Adrian"
     }
   }
 }

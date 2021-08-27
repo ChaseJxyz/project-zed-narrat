@@ -1,0 +1,21 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "Hello World!",
+  "main": "main.js",
+  "scripts": {
+    "test": "test command"
+  },
+  "repository": {
+    "type": "git",
+    "url": "C:\\Users\\narua\\OneDrive\\Documents\\GitHub\\project-zed-narrat"
+  },
+  "keywords": [
+    "keywords"
+  ],
+  "author": "Chase Anderson",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^13.2.2"
+  }
+}

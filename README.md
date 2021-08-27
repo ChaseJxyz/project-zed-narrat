@@ -53,3 +53,7 @@ Open http://localhost:8080 to view it in the browser.
 
 The page will reload if you make edits.
 You will also see any lint errors in the console.
+
+# Project Zed
+
+This is mostly to mess with narrat and see what I can do. There's really not much more written about this story than what's going to be in this. Maybe someday I'll build it out more to be its own thing! When I have the money to pay for all the art, that is.
